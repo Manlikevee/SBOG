@@ -12,10 +12,11 @@
     />
 </head>
 <body>
+    <div class="overlay"></div>
     <header>
         <div class="container">
             <div class="logo">
-                <a href="index.html"><img src="https://sbognigeria.org/wp-content/uploads/2017/03/sbog-logo.png" alt=""></a>
+                <a href="index.html"><img src="sbog-logo.png" alt=""></a>
                 
             </div>
             <div class="links">
@@ -27,8 +28,30 @@
                 <a href="gallery.html">GALLERY</a>
                 <a href="contactus.html">CONTACT US</a>
             </div>
+
+            <div class="toggle hide">
+                <ion-icon name="grid-outline"></ion-icon>
+            </div>
         </div>
     </header>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script>
+        // JavaScript to toggle the visibility of links and overlay on small screens
+        const links = document.querySelector('.links');
+        const toggle = document.querySelector('.toggle');
+        const overlay = document.querySelector('.overlay');
+
+        toggle.addEventListener('click', function () {
+            links.classList.toggle('show');
+            overlay.classList.toggle('show');
+        });
+
+        overlay.addEventListener('click', function () {
+            links.classList.remove('show');
+            overlay.classList.remove('show');
+        });
+    </script>
 
     <div class="herodata sectiondata">
         <div class="container">

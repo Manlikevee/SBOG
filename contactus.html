@@ -9,10 +9,11 @@
     <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div class="overlay"></div>
     <header>
         <div class="container">
             <div class="logo">
-                <a href="index.html"><img src="https://sbognigeria.org/wp-content/uploads/2017/03/sbog-logo.png" alt=""></a>
+                <a href="index.html"><img src="sbog-logo.png" alt=""></a>
                 
             </div>
             <div class="links">
@@ -24,8 +25,30 @@
                 <a href="gallery.html">GALLERY</a>
                 <a href="contactus.html">CONTACT US</a>
             </div>
+
+            <div class="toggle hide">
+                <ion-icon name="grid-outline"></ion-icon>
+            </div>
         </div>
     </header>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script>
+        // JavaScript to toggle the visibility of links and overlay on small screens
+        const links = document.querySelector('.links');
+        const toggle = document.querySelector('.toggle');
+        const overlay = document.querySelector('.overlay');
+
+        toggle.addEventListener('click', function () {
+            links.classList.toggle('show');
+            overlay.classList.toggle('show');
+        });
+
+        overlay.addEventListener('click', function () {
+            links.classList.remove('show');
+            overlay.classList.remove('show');
+        });
+    </script>
     <div class="herodata sectiondata">
         <div class="container">
 
@@ -80,8 +103,8 @@
                     <div class="producttitle">
                         ABOUT US
                        </div>
-                       <img src="https://sbognigeria.org/wp-content/uploads/sbog-logo.png" alt="">
-
+                       <img src="sbog-logo (1).png" alt="">
+    
                        <p>
                         SBOG Nigeria Limited is a privately owned company which produces critical minerals – Lithium ore, Lead, Zinc, Beryl ore. We are a company that continues to be financially, operationally and strategically strong and poised for growth.
                        </p>
@@ -95,7 +118,7 @@
                         <a href="">PRODUCTS</a>
                         <a href="">GALLERY</a>
                         <a href="">CONTACT US</a>
-
+    
                        </div>
                      
                 </div>
@@ -103,7 +126,7 @@
                     <div class="producttitle">
                         ADMINISTRATIVE OFFICE
                        </div>
-
+    
                        <div class="admin">
                         <div class="icon"></div>
                         <div class="text"> Ibusa House
@@ -112,14 +135,14 @@
                             Gbagada, Lagos
                             Nigeria.</div>
                        </div>
-
+    
                        <div class="admin">
                         <div class="icon"></div>
                         <div class="text"> 
                             +234 816 767 6835
                         </div>
                        </div>
-
+    
                        <div class="admin">
                         <div class="icon"></div>
                         <div class="text"> 
